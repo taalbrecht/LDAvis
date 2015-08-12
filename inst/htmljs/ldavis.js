@@ -606,7 +606,7 @@ LDAvis = function(to_select, json_file) {
             topicInput.step = "1";
             topicInput.value = "0"; // a value of 0 indicates no topic is selected
             topicInput.id = topicID;
-            Shiny.onInputChange("topicClicked", topicInput.id); //attempt to add shiny reactivity for selected topic
+            Shiny.onInputChange("topicClicked", topicInput); //attempt to add shiny reactivity for selected topic
             topicDiv.appendChild(topicInput);
 
  	    var previous = document.createElement("button");
