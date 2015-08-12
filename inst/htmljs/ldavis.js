@@ -410,6 +410,7 @@ LDAvis = function(to_select, json_file) {
                 var old_topic = topicID + vis_state.topic;
                 if (vis_state.topic > 0 && old_topic != this.id) {
                     topic_off(document.getElementById(old_topic));
+                    Shiny.onInputChange("topicClicked", vis_state.topic); //attempt to add shiny reactivity for selected topic
                 }
                 // make sure topic input box value and fragment reflects clicked selection
                 document.getElementById(topicID).value = vis_state.topic = d.topics;
@@ -606,7 +607,6 @@ LDAvis = function(to_select, json_file) {
             topicInput.step = "1";
             topicInput.value = "0"; // a value of 0 indicates no topic is selected
             topicInput.id = topicID;
-            Shiny.onInputChange("topicClicked", topicInput); //attempt to add shiny reactivity for selected topic
             topicDiv.appendChild(topicInput);
 
  	    var previous = document.createElement("button");
