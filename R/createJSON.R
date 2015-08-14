@@ -160,11 +160,11 @@ createJSON <- function(phi = matrix(), theta = matrix(), doc.length = integer(),
   topic.proportion <- topic.frequency/sum(topic.frequency)
 
   # re-order the K topics in order of decreasing proportion:
-  o <- order(topic.proportion, decreasing = TRUE)
-  phi <- phi[o, ]
-  theta <- theta[, o]
-  topic.frequency <- topic.frequency[o]
-  topic.proportion <- topic.proportion[o]
+  #o <- order(topic.proportion, decreasing = TRUE)
+  #phi <- phi[o, ]
+  #theta <- theta[, o]
+  #topic.frequency <- topic.frequency[o]
+  #topic.proportion <- topic.proportion[o]
   
   # compute intertopic distances using the specified multidimensional
   # scaling method:
